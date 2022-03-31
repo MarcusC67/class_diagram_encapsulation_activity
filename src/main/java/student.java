@@ -1,7 +1,7 @@
 public class student {
 
     private final String name;
-    private String grade;
+    private char grade;
     private int group;
     private final String secretNickName = "MySecretNickName";
     private int gradeIndex;
@@ -22,7 +22,7 @@ public class student {
         return name;
     }
 
-    public String getGrade() {
+    private char getGrade() {
         return grade;
     }
 
@@ -35,13 +35,13 @@ public class student {
     }
 
     // Subtract 1 from grade index and return char value at new index - ie: B to A, C to D, E to D, etc
-    public short getUpGrade() {
-        if (gradeIndex > 1) gradeIndex--;
+    public char getUpGrade() {
+        if (gradeIndex > 0) gradeIndex--;
             return allGrades.charAt(gradeIndex);
     }
 
     // Add 1 to grade index and return char value at new index - ie: A to B, B to C, D to E, etc
-    public short getDownGrade() {
+    public char getDownGrade() {
         if (gradeIndex < 6) gradeIndex++;
             return allGrades.charAt(gradeIndex);
     }
